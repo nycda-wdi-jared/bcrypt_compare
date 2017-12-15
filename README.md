@@ -1,13 +1,8 @@
-# Postgres Sequelize Client Boilerplate + Heroku Push
+# Encrypted Passwords/Bcrypt Compare
 
-<h2>Heroku</h2>
-
-* Run ```heroku create```
-* Run ```heroku addons:create heroku-postgresql:hobby-dev```
-* Run ```heroku config``` to see the jawsdb env variable just added
-* Resource: https://devcenter.heroku.com/articles/heroku-postgresql
-
-<h2>Other</h2>
-
-* You can connect to this database through the credentials they give you
-* You can see a breakdown of the credentials if you go to your app's page on heroku and find the database option
+* Look at the user model and how the password is created
+* A password should not be exposed anywhere, so ```bcrypt``` encrypts the password
+* It creates a ```password_hash``` which is used for comparison when a user signs in
+* When a user enter their password for sign in, ```bcrypt``` has a compare method to compare what the user has entered as their password against the password_hash in the database
+* Set up your environment and your database, add some user records, and look at the bcrypt method in the route-controller.js file.
+* Try to do a correct login & incorrect login. It will come back either true or false. bcrypt.compare is merely a method that returns a boolean.
