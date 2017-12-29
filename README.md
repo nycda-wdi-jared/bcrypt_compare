@@ -9,3 +9,5 @@
 * Remember to use postman for the routes since there is no ui set up
 
 * In this example, using an ORM, so look at the connection between the model-controller.js & route-controller.js
+
+http://codetheory.in/using-the-node-js-bcrypt-module-to-hash-and-safely-store-passwords/
